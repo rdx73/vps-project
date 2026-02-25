@@ -1,11 +1,18 @@
 {
-    "name": "My VPS",
-    "build": {
-        "dockerfile": "Dockerfile"
+    "name": "My-VPS-Ubuntu",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "upgradePackages": true
+        }
     },
     "customizations": {
         "vscode": {
-            "extensions": ["ms-azuretools.vscode-docker"]
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-python.python"
+            ]
         }
     },
     "remoteUser": "vscode"
