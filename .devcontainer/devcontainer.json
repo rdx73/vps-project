@@ -1,0 +1,12 @@
+{
+    "name": "My VPS",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": ["ms-azuretools.vscode-docker"]
+        }
+    },
+    "remoteUser": "vscode"
+}
