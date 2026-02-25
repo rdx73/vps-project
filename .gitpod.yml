@@ -1,0 +1,15 @@
+tasks:
+  - name: Setup Server
+    init: |
+      sudo apt update
+      sudo apt install -y nginx
+    command: |
+      echo "Server siap digunakan!"
+      # Masukkan perintah yang ingin dijalankan otomatis saat workspace terbuka
+      # Contoh: npm start atau python app.py
+
+ports:
+  - port: 80
+    onOpen: notify
+    visibility: public
+    
