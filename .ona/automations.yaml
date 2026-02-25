@@ -1,0 +1,12 @@
+tasks:
+  setup-vps:
+    name: Install Tools VPS
+    description: Menginstall neofetch dan update sistem
+    triggeredBy:
+      - postDevcontainerStart
+    command: |
+      sudo apt-get update
+      sudo apt-get install -y neofetch htop curl wget net-tools
+      neofetch
+      echo "VPS SIAP DIGUNAKAN! Silakan ketik perintah di terminal bawah."
+      
